@@ -1,0 +1,14 @@
+{
+    "odessa":{ 
+        "nameCity":"Одеська область",
+        "ourHelp": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio sapiente necessitatibus incidunt, laborum ea eos aliquam quibusdam omnis perferendis asperiores laboriosam modi. Soluta temporibus tempora, inventore distinctio provident amet nihil.Laborum, nemo voluptas! Voluptatum, labore sed provident odio cumque optio voluptate officia eaque quibusdam. Aliquid error non itaque ipsa vel nulla corrupti tenetur molestias. Aut provident laboriosam dolores ipsum enim? Expedita quas tempore ipsum saepe velit quisquam alias, ad a, itaque nam consequuntur eaque repellat aspernatur vero laborum iste. Labore, temporibus. Sunt praesentium nostrum ipsa voluptate cum fuga autem magni!"
+    },
+    "cityOdessa":{ 
+        "nameCity":"Одеса",
+        "ourHelp": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio sapiente necessitatibus incidunt, laborum ea eos aliquam quibusdam omnis perferendis asperiores laboriosam modi. Soluta temporibus tempora, inventore distinctio provident amet nihil.Laborum, nemo voluptas! Voluptatum, labore sed provident odio cumque optio voluptate officia eaque quibusdam. Aliquid error non itaque ipsa vel nulla corrupti tenetur molestias. Aut provident laboriosam dolores ipsum enim? Expedita quas tempore ipsum saepe velit quisquam alias, ad a, itaque nam consequuntur eaque repellat aspernatur vero laborum iste. Labore, temporibus. Sunt praesentium nostrum ipsa voluptate cum fuga autem magni!"
+    },
+    "baxmyt":{ 
+        "nameCity":"Бахмут",
+        "ourHelp": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio sapiente necessitatibus incidunt, laborum ea eos aliquam quibusdam omnis perferendis asperiores laboriosam modi. Soluta temporibus tempora, inventore distinctio provident amet nihil.Laborum, nemo voluptas! Voluptatum, labore sed provident odio cumque optio voluptate officia eaque quibusdam. Aliquid error non itaque ipsa vel nulla corrupti tenetur molestias. Aut provident laboriosam dolores ipsum enim? Expedita quas tempore ipsum saepe velit quisquam alias, ad a, itaque nam consequuntur eaque repellat aspernatur vero laborum iste. Labore, temporibus. Sunt praesentium nostrum ipsa voluptate cum fuga autem magni!"
+    }
+}
