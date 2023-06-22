@@ -442,6 +442,11 @@ img, video{
     color: #1264AB;
 }
 
+.textNews a{
+    text-decoration: none;
+    color: #1264AB;
+}
+
 .imgNews1{
     height: 100%;
     width: 68%;
