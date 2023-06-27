@@ -481,7 +481,93 @@ img, video{
 
 .viewAll a{
     text-decoration: none;
+    color: #FBFC04;
+}
+
+.nantConteiner{
+    margin: 30px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.nantHeader{
+    max-width: 1440px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     color: #1264AB;
+    font-size: 40px;
+}
+
+.nant{
+    max-width: 1440px;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    padding: 20px;
+}
+
+.nantCart{
+    max-height: 500px;
+    overflow: hidden;
+    border-radius: 20px;
+    background-color: #F8FAFB;
+    box-shadow: 2px 4px 10px 2px rgba(0,0,0,0.6);
+    position: relative;
+    bottom: 0;
+    right: 0;
+    transition-property: box-shadow, bottom, right;
+    transition-duration: 0.5s;
+}
+
+.nantCart:hover{
+    box-shadow: 7px 9px 10px 6px rgba(0,0,0,0.6);
+    bottom: 5px;
+    right: 5px;
+}
+
+.imgNantCart{
+    width: 100%;
+    height: 70%;
+    text-align: center;
+    color: #1264AB;
+}
+
+.imgNantCart img {
+    width: 100%;
+    object-fit: cover
+}
+
+.textNantCart{
+    width: 100%;
+    text-align: center;
+    color: #1264AB;
+}
+
+.btnConteinerMore{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.textNantCart a{
+    text-decoration: none;
+    color: #F8FAFB;
+}
+
+.btnTextMore{
+    width: 100px;
+    padding: 10px;
+    background-color: #1264AB;
+    border-radius: 25px;
 }
 
 .mapUkConteiner{
@@ -568,6 +654,47 @@ circle:hover{
     font-size: 20px;
     line-height: 35px;
     margin-bottom: 20px;
+}
+
+.conteinerMapOdessa{
+    max-width: 1440px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.headerMapOdessa{
+    width: 110%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-size: 40px;
+    color: #1264AB;
+}
+
+.bodyMapOdessa{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.contactOdessa{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 50%;
+}
+
+.geolocation a{
+    color: black;
+    text-decoration: none;
+}
+
+.contactSot{
+    display: flex;
 }
 
 .footer{

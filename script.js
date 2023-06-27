@@ -62,7 +62,10 @@ selectPlace = document.getElementsByClassName('selectPlace'),
 places = document.querySelectorAll('.places'),
 aboutPlace = document.getElementsByClassName('aboutPlace'),
 textNews = document.getElementsByClassName('textNews'),
-imgNews = document.getElementsByClassName('imgNews')
+imgNews = document.getElementsByClassName('imgNews'),
+textNantCart = document.getElementsByClassName('textNantCart'),
+imgActiveNant,
+activeNant
 
 function controlHeight(){
     $(control).css('height', `${imgConteinerVideoHeight*0.7}px`);
@@ -413,6 +416,27 @@ $(textNews).hover(
                 height: '80%'
             },500)
         }
+    }
+);
+
+$(textNantCart).hover(
+    function (e) {
+        e.preventDefault();
+        activeNant = e.target.id
+        imgActiveNant = 'imgNantCart' + activeNant.slice(12,13)
+        $(`#${activeNant}`).animate({
+            height: '70%'
+        },500)
+        $(`#${imgActiveNant}`).animate({
+            height: '30%'
+        },500)
+    }, function () {
+        $(`#${activeNant}`).animate({
+            height: '30%'
+        },500)
+        $(`#${imgActiveNant}`).animate({
+            height: '70%'
+        },500)
     }
 );
 
