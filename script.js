@@ -25,8 +25,6 @@ uaConteiner = document.getElementsByClassName('uaConteiner'),
 enConteiner = document.getElementsByClassName('enConteiner'),
 uaText = document.getElementsByClassName('uaText'),
 enText = document.getElementsByClassName('enText'),
-heightHeader = $(document.getElementsByClassName('header')).outerHeight(),
-imgConteinerVideoHeight = $(document.getElementsByClassName('imgCnteinerVideo')).outerHeight(),
 btnHelp = document.getElementsByClassName('btnHelp'),
 instagramWhite = document.getElementById('instagramWhite'),
 telegramWhite = document.getElementById('telegramWhite'),
@@ -65,11 +63,16 @@ textNews = document.getElementsByClassName('textNews'),
 imgNews = document.getElementsByClassName('imgNews'),
 textNantCart = document.getElementsByClassName('textNantCart'),
 imgActiveNant,
-activeNant
+activeNant,
+clientHeight,
+imgConteinerVideoHeight,
+outerHeight,
+//Переменная
+timeToAnimation = 1000
 
 function controlHeight(){
-    $(control).css('height', `${imgConteinerVideoHeight*0.7}px`);
-    $(control).css('top', `${imgConteinerVideoHeight*0.5-50}px`);
+    console.log(imgConteinerVideoHeight*0.5-imgConteinerVideoHeight*0.05)
+    $(control).css('top', `${imgConteinerVideoHeight*0.5+imgConteinerVideoHeight*0.05}px`);
 }
 
 function visible(){
@@ -129,6 +132,11 @@ function closeMenu(block, text){
     },500)
 }
 
+function videoConteinerCss(){
+    $(videoConteiner).css('padding-top', heightHeader);
+    // $(videoConteiner).css('height', clientHeight - heightHeader);
+}
+
 function placeSelect (placeActive){
     fetch('city.json')
     .then(response => response.json())
@@ -143,7 +151,7 @@ function placeSelect (placeActive){
 }
 
 function widthMapFunct(){
-    hightMap = document.documentElement.clientHeight - heightHeader
+    hightMap = clientHeight - heightHeader
     widthMap = hightMap * 1.23226
     $(mapUkConteiner).css('width', widthMap);
 }
@@ -163,19 +171,28 @@ function widthMapFunct(){
 // }
 
 $(document).ready ( function(){
-    $(videoConteiner).css('padding-top', heightHeader);
+    clientHeight = window.screen.availHeight
+    heightHeader = $(document.getElementsByClassName('header')).outerHeight()
+    videoConteinerCss()
+    imgConteinerVideoHeight = $(document.getElementsByClassName('imgCnteinerVideo')).outerHeight()
     controlHeight()
     widthMapFunct()
 });
 
 $(document).resize(function () { 
-    $(videoConteiner).css('padding-top', heightHeader);
+    clientHeight = window.screen.availHeight
+    heightHeader = $(document.getElementsByClassName('header')).outerHeight()
+    videoConteinerCss()
+    imgConteinerVideoHeight = $(document.getElementsByClassName('imgCnteinerVideo')).outerHeight()
     controlHeight()
     widthMapFunct()
 });
 
 window.addEventListener('resize', ()=>{
-    $(videoConteiner).css('padding-top', heightHeader);
+    clientHeight = window.screen.availHeight
+    heightHeader = $(document.getElementsByClassName('header')).outerHeight()
+    videoConteinerCss()
+    imgConteinerVideoHeight = $(document.getElementsByClassName('imgCnteinerVideo')).outerHeight()
     controlHeight()
     widthMapFunct()
 })
@@ -388,33 +405,33 @@ $(textNews).hover(
         if (activeNews == 'textNews1'){
             $(`#${activeNews}`).animate({
                 width: '68%'
-            },500)
+            },timeToAnimation)
             $(`#${imgActiveNews}`).animate({
                 width: '32%'
-            },500)
+            },timeToAnimation)
         }else{
             $(`#${activeNews}`).animate({
                 height: '80%'
-            },500)
+            },timeToAnimation)
             $(`#${imgActiveNews}`).animate({
                 height: '20%'
-            },500)
+            },timeToAnimation)
         }
     }, function () {
         if (activeNews == 'textNews1'){
             $(`#${activeNews}`).animate({
                 width: '32%'
-            },500)
+            },timeToAnimation)
             $(`#${imgActiveNews}`).animate({
                 width: '68%'
-            },500)
+            },timeToAnimation)
         }else{
             $(`#${activeNews}`).animate({
                 height: '20%'
-            },500)
+            },timeToAnimation)
             $(`#${imgActiveNews}`).animate({
                 height: '80%'
-            },500)
+            },timeToAnimation)
         }
     }
 );
@@ -426,17 +443,17 @@ $(textNantCart).hover(
         imgActiveNant = 'imgNantCart' + activeNant.slice(12,13)
         $(`#${activeNant}`).animate({
             height: '70%'
-        },500)
+        },timeToAnimation)
         $(`#${imgActiveNant}`).animate({
             height: '30%'
-        },500)
+        },timeToAnimation)
     }, function () {
         $(`#${activeNant}`).animate({
             height: '30%'
-        },500)
+        },timeToAnimation)
         $(`#${imgActiveNant}`).animate({
             height: '70%'
-        },500)
+        },timeToAnimation)
     }
 );
 
