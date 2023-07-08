@@ -19,8 +19,7 @@ img, video{
     z-index: 30;
     position: fixed;
     bottom: 180px;
-    left: 95%;
-    width: 100px;
+    right: 2px;
     height: 100px;
 }
 
@@ -54,6 +53,44 @@ img, video{
     position: absolute;
     width: 1px;
     height: 1px;
+}
+
+.textSlogoWithLogo{
+    color: #F8FAFB;
+}
+
+.headerWithBurger{
+    display: none;
+}
+
+.headerConteinerLogoClose{
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.menu{
+    z-index: 1000;
+    top: 110px;
+    left: 10px;
+    position: fixed;
+    width: 2px;
+    display: flex;
+    flex-direction: column;
+}
+
+.block1, .block2{
+    width: 20px;
+    height: 5px;
+}
+
+.block1{
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+}
+
+.block2{
+    border-bottom: 3px solid black;
 }
 
 .header{
@@ -783,5 +820,95 @@ circle:hover{
 @media screen and (max-width: 1400px) {
     .footerConteiner{
         justify-content: space-around;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .mapUkConteiner{
+        max-width: 95%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .videoConteiner{
+        display: none;
+    }
+
+    .news{
+        margin-top: 195px;
+    }
+
+    .newsBody{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .news1{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        display: block;
+    }
+
+    .imgNews1{
+        width: 100%;
+        height: 80%;
+        text-align: center;
+        color: #1264AB;
+    }
+
+    .textNews1{
+        width: 100%;
+        text-align: center;
+        color: #1264AB;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .nant{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .conteinerMapOdessa{
+        max-width: 90%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+
+    .headerWithBurger{
+        display: block;
+    }
+
+    .header{
+        display: none;
+    }
+
+    .newsBody{
+        grid-template-columns: 1fr;
+    }
+
+    .nant{
+        grid-template-columns: 1fr;
+    }
+
+    .bodyMapOdessa{
+        flex-direction: column;
+    }
+
+    .contactOdessa{
+        width: 100%;
+        display: grid;
+    }
+
+    .footerConteiner{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .sotSet{
+        justify-content: center;
+        align-items: center;
     }
 }

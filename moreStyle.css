@@ -16,8 +16,8 @@ img, video{
 .spec{
     z-index: 30;
     position: fixed;
-    top: 88%;
-    left: 95%;
+    bottom: 180px;
+    right: 2px;
     width: 100px;
     height: 100px;
 }
@@ -351,4 +351,32 @@ img, video{
 	{
 		box-shadow: 7px 9px 10px 6px rgba(0,0,0,0.6);  
 	}
+}
+
+@media screen and (max-width: 1400px) {
+    .footerConteiner{
+        justify-content: space-around;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .spec{
+        left: 80%;
+    }
+
+    .header{
+        display: none;
+    }
+
+    .footerConteiner{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .sotSet{
+        justify-content: center;
+        align-items: center;
+    }
 }
