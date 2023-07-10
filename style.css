@@ -63,12 +63,6 @@ img, video{
     display: none;
 }
 
-.headerConteinerLogoClose{
-    position: fixed;
-    width: 100%;
-    z-index: 1000;
-}
-
 .menu{
     z-index: 1000;
     top: 110px;
@@ -265,6 +259,7 @@ img, video{
 }
 
 .headerMenu{
+
     background-color: #F8FAFB;
     width: 100%;
     display: flex;

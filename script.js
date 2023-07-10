@@ -82,7 +82,6 @@ navigationClose = document.getElementsByClassName('navigationClose')
 timeToAnimation = 1000
 
 function controlHeight(){
-    console.log(imgConteinerVideoHeight*0.5-imgConteinerVideoHeight*0.05)
     $(control).css('top', `${imgConteinerVideoHeight*0.5+imgConteinerVideoHeight*0.05}px`);
 }
 
