@@ -209,7 +209,7 @@ window.addEventListener('resize', ()=>{
 
 $(menuIcon).click(function () { 
     $(menuIcon).css('display', 'none');
-    $(menu).css('left', '-500px');
+    $(menu).css('left', '-210px');
     $(navigation).css('display', 'block');
     $(menu).animate({
         left: '10px'
@@ -219,13 +219,15 @@ $(menuIcon).click(function () {
 $(navigationClose).click(function (e) { 
     e.preventDefault();
     $(menu).animate({
-        left: '-500px'
-    }, 1000)
-    $(navigation).css('display', 'none');
-    $(menuIcon).css('display', 'block');
-    $(menu).animate({
-        left: '10px'
-    }, 1000)
+        left: '-210px'
+    }, 500)
+    setTimeout(()=>{
+        $(navigation).css('display', 'none');
+        $(menuIcon).css('display', 'block');
+        $(menu).animate({
+            left: '10px'
+        }, 0)
+    }, 550)
 });
 
 $(catProject).click(function () {  

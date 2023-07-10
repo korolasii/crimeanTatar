@@ -60,11 +60,14 @@ img, video{
 }
 
 .headerWithBurger{
+    position: fixed;
+    width: 100%;
     display: none;
+    z-index: 1000;
 }
 
 .menu{
-    z-index: 1000;
+    z-index: 1001;
     top: 110px;
     left: 10px;
     position: fixed;
