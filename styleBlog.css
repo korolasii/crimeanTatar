@@ -391,6 +391,14 @@ img, video{
 
 @media screen and (max-width: 576px) {
 
+    .classAdd{
+        padding: 5px;
+    }
+
+    .headerWithBurger{
+        display: block;
+    }
+
     .header{
         display: none;
     }
@@ -399,6 +407,7 @@ img, video{
         margin-top: 195px;
         grid-template-columns: 1fr;
     }
+
 
     .footerConteiner{
         flex-direction: column;

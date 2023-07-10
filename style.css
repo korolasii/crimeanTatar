@@ -79,18 +79,39 @@ img, video{
     flex-direction: column;
 }
 
-.block1, .block2{
-    width: 20px;
-    height: 5px;
+.menuIcon{
+    width: 25px;
+    height: 25px;
+    overflow: hidden;
 }
 
-.block1{
-    border-top: 3px solid black;
-    border-bottom: 3px solid black;
+.navigation{
+    background-color: rgba(248, 250, 251, 0.8);
+    width: 200px;
+    border-radius: 15px;
+    padding: 10px 15px 10px 15px;
 }
 
-.block2{
-    border-bottom: 3px solid black;
+.valonter, .project{
+    width: 100%;
+}
+
+.catVal, .catProject{
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+}
+.catProject{
+    width: 80%;
+}
+
+.open{
+    height: 20px;
+    overflow: hidden;
+}
+
+.pot{
+    padding-left: 20px;
 }
 
 .header{
@@ -874,6 +895,10 @@ circle:hover{
 }
 
 @media screen and (max-width: 576px) {
+
+    .classAdd{
+        padding: 5px;
+    }
 
     .headerWithBurger{
         display: block;

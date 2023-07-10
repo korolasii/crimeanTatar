@@ -360,8 +360,13 @@ img, video{
 }
 
 @media screen and (max-width: 576px) {
-    .spec{
-        left: 80%;
+
+    .classAdd{
+        padding: 5px;
+    }
+
+    .headerWithBurger{
+        display: block;
     }
 
     .header{
