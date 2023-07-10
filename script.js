@@ -67,6 +67,17 @@ activeNant,
 clientHeight,
 imgConteinerVideoHeight,
 outerHeight,
+menu = document.getElementsByClassName('menu'),
+menuIcon = document.getElementsByClassName('menuIcon'),
+navigation = document.getElementsByClassName('navigation'),
+potCatVal = document.getElementsByClassName('potCatVal'),
+potCatProject = document.getElementsByClassName('potCatProject'),
+catVal = document.getElementsByClassName('catVal'),
+catProject = document.getElementsByClassName('catProject'),
+open1 = document.getElementsByClassName('open1'),
+open2 = document.getElementsByClassName('open2'),
+iconMenu = document.getElementsByClassName('iconMenu'),
+navigationClose = document.getElementsByClassName('navigationClose')
 //Переменная
 timeToAnimation = 1000
 
@@ -196,6 +207,47 @@ window.addEventListener('resize', ()=>{
     controlHeight()
     widthMapFunct()
 })
+
+$(menuIcon).click(function () { 
+    $(menuIcon).css('display', 'none');
+    $(menu).css('left', '-500px');
+    $(navigation).css('display', 'block');
+    $(menu).animate({
+        left: '10px'
+    }, 1000)
+});
+
+$(navigationClose).click(function (e) { 
+    e.preventDefault();
+    $(menu).animate({
+        left: '-500px'
+    }, 1000)
+    $(navigation).css('display', 'none');
+    $(menuIcon).css('display', 'block');
+    $(menu).animate({
+        left: '10px'
+    }, 1000)
+});
+
+$(catProject).click(function () {  
+    if ($(potCatProject).css('display') === 'none'){
+        $(potCatProject).css('display', 'block');
+        $(open2).css('rotate', '0deg'); 
+    }else{
+        $(potCatProject).css('display', 'none');
+        $(open2).css('rotate', '267deg'); 
+    }   
+});
+
+$(catVal).click(function () { 
+    if ($(potCatVal).css('display') === 'none'){
+        $(potCatVal).css('display', 'block');
+        $(open1).css('rotate', '0deg'); 
+    }else{
+        $(potCatVal).css('display', 'none');
+        $(open1).css('rotate', '267deg'); 
+    }  
+});
 
 $(closeNewsHeader).click(function (e) { 
     e.preventDefault();

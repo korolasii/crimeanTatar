@@ -86,10 +86,20 @@ img, video{
 }
 
 .navigation{
-    background-color: rgba(248, 250, 251, 0.8);
+    color: #F8FAFB;
+    display: none;
+    background-color: rgba(18, 100, 171, 0.8);
     width: 200px;
     border-radius: 15px;
-    padding: 10px 15px 10px 15px;
+    padding: 20px 15px 10px 15px;
+}
+
+.closeNavigation{
+    z-index: 1001;
+    position: absolute;
+    height: 10px;
+    top: 5px;
+    left: 210px;
 }
 
 .valonter, .project{
@@ -98,20 +108,17 @@ img, video{
 
 .catVal, .catProject{
     display: flex;
-    justify-content: space-between;
-    width: 70%;
-}
-.catProject{
-    width: 80%;
 }
 
 .open{
     height: 20px;
     overflow: hidden;
+    rotate: 267deg;
 }
 
 .pot{
-    padding-left: 20px;
+    padding-left: 30px;
+    display: none;
 }
 
 .header{
